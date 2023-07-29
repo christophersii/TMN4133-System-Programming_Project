@@ -1,0 +1,21 @@
+Example command to run:
+Task 1: File Operation
+CreateOrOpenFile(): ./supercommand 1 1 file.txt filepath
+changePermission(): ./supercommand 1 2 file.txt filepath 0777
+readAndPrintFile(): ./supercommand 1 3 file.txt filepath
+removeFile(): ./supercommand 1 4 file.txt filepath
+
+Task 2: Directory Operation
+create_directory(): ./supercommand 2 1 directoryname filepath
+delete_directory(): ./supercommand 2 2 directoryname filepath
+get_current_working_directory(): ./supercommand 2 3 directoryname filepath
+list_current_directory(): ./supercommand 2 4
+
+Task 3: Keylogger Operation
+KeyLogger(): ./supercommand 3 (must run as root)
+
+
+
+
+
+

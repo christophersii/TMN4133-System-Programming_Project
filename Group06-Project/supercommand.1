@@ -1,0 +1,73 @@
+SUPERCOMMAND(1)
+
+.TH supercommand 1 "06 Jan 2023" "version 1.0" "supercommand man page"
+.SH NAME
+supercommand - a command line utility for performing file and directory operations and keylogging
+
+.SH SYNOPSIS
+supercommand [OPTION] [SUBOPTION] [FILE] [PATH] [PERMISSIONS]
+
+.SH DESCRIPTION
+supercommand is a utility for performing various operations on files and directories, as well as keylogging. It takes a single required option, and additional options and arguments depending on the chosen option.
+
+.SH OPTION
+
+   1. File Operations
+   2. Directory Operations
+   3. Key Logger
+
+.SH SUBOPTION
+
+   The available suboptions for file operations are:
+
+   1. Create or open a file
+   2. Change permission of a file
+   3. Read and print a file
+   4. Remove a file
+
+   The available suboptions for directory operations are:
+
+   1. Create a directory
+   2. Delete a directory
+   3. Get current working directory
+   4. List current directory
+
+   When using the file operations option (1), the additional required argument is the name of the file to be acted upon, and the optional second argument is the path to the file. When using the change permissions suboption (2), an additional argument for the desired permissions in octal notation is required.
+
+   When using the directory operations option (2), the additional required argument is the name of the directory to be acted upon, and the optional second argument is the path to the directory.
+
+   When using the keylogger option (3), no additional arguments are required.
+
+.SH EXAMPLES
+   Create a file called "test.txt" in the "/home/user/documents" directory:
+          supercommand 1 1 test.txt /home/user/documents
+
+   Change the permission of the file "test.txt" in the "/home/user/documents" directory to 755:
+          supercommand 1 2 test.txt /home/user/documents 755
+
+   Read and print the contents of the file "test.txt" in the "/home/user/documents" directory:
+          supercommand 1 3 test.txt /home/user/documents
+
+   Remove the file "test.txt" in the "/home/user/documents" directory:
+          supercommand 1 4 test.txt /home/user/documents
+
+   Create a directory called "test" in the "/home/user/documents" directory:
+          supercommand 2 1 test /home/user/documents
+
+   Delete the directory "test" in the "/home/user/documents" directory:
+          supercommand 2 2 test /home/user/documents
+
+   Get the current working directory:
+          supercommand 2 3
+
+   List the contents of the current directory:
+          supercommand 2 4
+
+   To start the keylogger:
+          supercommand 3
+
+.SH SEE ALSO
+FileOperation.c, DirectoryOperations.c, KeyLoggerOperation.c
+
+.SH AUTHOR
+Written by Song Wang Ye (71680), Ho Wan Yu (69860), Heng Zhen Ye (69847), and Christopher Sii How Chiong (69385).
